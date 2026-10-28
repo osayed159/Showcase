@@ -1,0 +1,54 @@
+services:
+  ollama:
+    image: ollama/ollama:0.40.11
+    volumes:
+      - ollama-models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      retries: 30
+    # Uncomment to use an NVIDIA GPU.
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  pull-model:
+    image: ollama/ollama:0.40.11
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["ollama", "pull", "qwen3:4b-instruct-2507-q4_K_M"]
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+  api:
+    build: .
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    ports:
+      - "8000:8000"
+    depends_on:
+      pull-model:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 15s
+      start_period: 60s
+
+  ui:
+    build: .
+    command: ["streamlit", "run", "app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    ports:
+      - "8501:8501"
+    depends_on:
+      pull-model:
+        condition: service_completed_successfully
+
+volumes:
+  ollama-models:

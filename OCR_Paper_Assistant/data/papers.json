@@ -1,0 +1,717 @@
+[
+  {
+    "arxiv_id": "2310.16809v2",
+    "title": "Exploring OCR Capabilities of GPT-4V(ision) : A Quantitative and In-depth Evaluation",
+    "authors": [
+      "Yongxin Shi",
+      "Dezhi Peng",
+      "Wenhui Liao",
+      "Zening Lin",
+      "Xinhong Chen",
+      "Chongyu Liu",
+      "Yuyi Zhang",
+      "Lianwen Jin"
+    ],
+    "abstract": "This paper presents a comprehensive evaluation of the Optical Character Recognition (OCR) capabilities of the recently released GPT-4V(ision), a Large Multimodal Model (LMM). We assess the model's performance across a range of OCR tasks, including scene text recognition, handwritten text recognition, handwritten mathematical expression recognition, table structure recognition, and information extraction from visually-rich document. The evaluation reveals that GPT-4V performs well in recognizing and understanding Latin contents, but struggles with multilingual scenarios and complex tasks. Specifically, it showed limitations when dealing with non-Latin languages and complex tasks such as handwriting mathematical expression recognition, table structure recognition, and end-to-end semantic entity recognition and pair extraction from document image. Based on these observations, we affirm the necessity and continued research value of specialized OCR models. In general, despite its versatility in handling diverse OCR tasks, GPT-4V does not outperform existing state-of-the-art OCR models. How to fully utilize pre-trained general-purpose LMMs such as GPT-4V for OCR downstream tasks remains an open problem. The study offers a critical reference for future research in OCR with LMMs. Evaluation pipeline and results are available at https://github.com/SCUT-DLVCLab/GPT-4V_OCR.",
+    "published": "2023-10-25",
+    "pdf_url": "https://arxiv.org/pdf/2310.16809v2",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2008.07839v2",
+    "title": "EASTER: Efficient and Scalable Text Recognizer",
+    "authors": [
+      "Kartik Chaudhary",
+      "Raghav Bali"
+    ],
+    "abstract": "Recent progress in deep learning has led to the development of Optical Character Recognition (OCR) systems which perform remarkably well. Most research has been around recurrent networks as well as complex gated layers which make the overall solution complex and difficult to scale. In this paper, we present an Efficient And Scalable TExt Recognizer (EASTER) to perform optical character recognition on both machine printed and handwritten text. Our model utilises 1-D convolutional layers without any recurrence which enables parallel training with considerably less volume of data. We experimented with multiple variations of our architecture and one of the smallest variant (depth and number of parameter wise) performs comparably to RNN based complex choices. Our 20-layered deepest variant outperforms RNN architectures with a good margin on benchmarking datasets like IIIT-5k and SVT. We also showcase improvements over the current best results on offline handwritten text recognition task. We also present data generation pipelines with augmentation setup to generate synthetic datasets for both handwritten and machine printed text.",
+    "published": "2020-08-18",
+    "pdf_url": "https://arxiv.org/pdf/2008.07839v2",
+    "categories": [
+      "cs.CV",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2201.00132v1",
+    "title": "SAFL: A Self-Attention Scene Text Recognizer with Focal Loss",
+    "authors": [
+      "Bao Hieu Tran",
+      "Thanh Le-Cong",
+      "Huu Manh Nguyen",
+      "Duc Anh Le",
+      "Thanh Hung Nguyen",
+      "Phi Le Nguyen"
+    ],
+    "abstract": "In the last decades, scene text recognition has gained worldwide attention from both the academic community and actual users due to its importance in a wide range of applications. Despite achievements in optical character recognition, scene text recognition remains challenging due to inherent problems such as distortions or irregular layout. Most of the existing approaches mainly leverage recurrence or convolution-based neural networks. However, while recurrent neural networks (RNNs) usually suffer from slow training speed due to sequential computation and encounter problems as vanishing gradient or bottleneck, CNN endures a trade-off between complexity and performance. In this paper, we introduce SAFL, a self-attention-based neural network model with the focal loss for scene text recognition, to overcome the limitation of the existing approaches. The use of focal loss instead of negative log-likelihood helps the model focus more on low-frequency samples training. Moreover, to deal with the distortions and irregular texts, we exploit Spatial TransformerNetwork (STN) to rectify text before passing to the recognition network. We perform experiments to compare the performance of the proposed model with seven benchmarks. The numerical results show that our model achieves the best performance.",
+    "published": "2022-01-01",
+    "pdf_url": "https://arxiv.org/pdf/2201.00132v1",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2603.03580v1",
+    "title": "An Effective Data Augmentation Method by Asking Questions about Scene Text Images",
+    "authors": [
+      "Xu Yao",
+      "Lei Kang"
+    ],
+    "abstract": "Scene text recognition (STR) and handwritten text recognition (HTR) face significant challenges in accurately transcribing textual content from images into machine-readable formats. Conventional OCR models often predict transcriptions directly, which limits detailed reasoning about text structure. We propose a VQA-inspired data augmentation framework that strengthens OCR training through structured question-answering tasks. For each image-text pair, we generate natural-language questions probing character-level attributes such as presence, position, and frequency, with answers derived from ground-truth text. These auxiliary tasks encourage finer-grained reasoning, and the OCR model aligns visual features with textual queries to jointly reason over images and questions. Experiments on WordArt and Esposalles datasets show consistent improvements over baseline models, with significant reductions in both CER and WER. Our code is publicly available at https://github.com/xuyaooo/DataAugOCR.",
+    "published": "2026-03-03",
+    "pdf_url": "https://arxiv.org/pdf/2603.03580v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17134v1",
+    "title": "Efficiently Leveraging Linguistic Priors for Scene Text Spotting",
+    "authors": [
+      "Nguyen Nguyen",
+      "Yapeng Tian",
+      "Chenliang Xu"
+    ],
+    "abstract": "Incorporating linguistic knowledge can improve scene text recognition, but it is questionable whether the same holds for scene text spotting, which typically involves text detection and recognition. This paper proposes a method that leverages linguistic knowledge from a large text corpus to replace the traditional one-hot encoding used in auto-regressive scene text spotting and recognition models. This allows the model to capture the relationship between characters in the same word. Additionally, we introduce a technique to generate text distributions that align well with scene text datasets, removing the need for in-domain fine-tuning. As a result, the newly created text distributions are more informative than pure one-hot encoding, leading to improved spotting and recognition performance. Our method is simple and efficient, and it can easily be integrated into existing auto-regressive-based approaches. Experimental results show that our method not only improves recognition accuracy but also enables more accurate localization of words. It significantly improves both state-of-the-art scene text spotting and recognition pipelines, achieving state-of-the-art results on several benchmarks.",
+    "published": "2024-02-27",
+    "pdf_url": "https://arxiv.org/pdf/2402.17134v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2512.01348v1",
+    "title": "Handwritten Text Recognition for Low Resource Languages",
+    "authors": [
+      "Sayantan Dey",
+      "Alireza Alaei",
+      "Partha Pratim Roy"
+    ],
+    "abstract": "Despite considerable progress in handwritten text recognition, paragraph-level handwritten text recognition, especially in low-resource languages, such as Hindi, Urdu and similar scripts, remains a challenging problem. These languages, often lacking comprehensive linguistic resources, require special attention to develop robust systems for accurate optical character recognition (OCR). This paper introduces BharatOCR, a novel segmentation-free paragraph-level handwritten Hindi and Urdu text recognition. We propose a ViT-Transformer Decoder-LM architecture for handwritten text recognition, where a Vision Transformer (ViT) extracts visual features, a Transformer decoder generates text sequences, and a pre-trained language model (LM) refines the output to improve accuracy, fluency, and coherence. Our model utilizes a Data-efficient Image Transformer (DeiT) model proposed for masked image modeling in this research work. In addition, we adopt a RoBERTa architecture optimized for masked language modeling (MLM) to enhance the linguistic comprehension and generative capabilities of the proposed model. The transformer decoder generates text sequences from visual embeddings. This model is designed to iteratively process a paragraph image line by line, called implicit line segmentation. The proposed model was evaluated using our custom dataset ('Parimal Urdu') and ('Parimal Hindi'), introduced in this research work, as well as two public datasets. The proposed model achieved benchmark results in the NUST-UHWR, PUCIT-OUHL, and Parimal-Urdu datasets, achieving character recognition rates of 96.24%, 92.05%, and 94.80%, respectively. The model also provided benchmark results using the Hindi dataset achieving a character recognition rate of 80.64%. The results obtained from our proposed model indicated that it outperformed several state-of-the-art Urdu text recognition methods.",
+    "published": "2025-12-01",
+    "pdf_url": "https://arxiv.org/pdf/2512.01348v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2604.23685v1",
+    "title": "Reading in the Dark: Low-light Scene Text Recognition",
+    "authors": [
+      "Xuanshuo Fu",
+      "Lei Kang",
+      "Ernest Valveny",
+      "Dimosthenis Karatzas",
+      "Javier Vazquez-Corral"
+    ],
+    "abstract": "Accurate text recognition in low-light environments is essential for intelligent systems in applications ranging from autonomous vehicles to smart surveillance. However, challenges such as poor illumination and noise interference remain underexplored. To address this gap, we introduce LSTR, a large-scale Low-light Scene Text Recognition dataset comprising 11,273 low-light images generated from well-lit datasets (ICDAR2015, IIIT5K, and WordArt), along with ESTR, which includes 60 real nighttime street-scene images in English and Spanish for exclusive evaluation. We explore two solution strategies: (1) employing Optical Character Recognition (OCR) models with fine-tuning and LoRA-based fine-tuning and (2) a joint training strategy that integrates a low-light image enhancement (LLIE) module with an OCR model. In particular, we propose a novel re-render LLIE (RLLIE) module, which demonstrates improved performance on real-world data. Through extensive experimentation, we analyze various training strategies and address a key research question: \\emph{How bright is bright enough for effective scene text recognition?} Our results indicate that standalone LLIE or OCR models perform inadequately under low-light conditions, highlighting the advantages of specialized, jointly trained text-centric approaches. Additionally, we provide a comprehensive benchmark to support future research in robust low-light scene text recognition. https://huggingface.co/datasets/lumimusta/Low-light_Scene_Text_Dataset.",
+    "published": "2026-04-26",
+    "pdf_url": "https://arxiv.org/pdf/2604.23685v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "1912.04561v2",
+    "title": "A Feasible Framework for Arbitrary-Shaped Scene Text Recognition",
+    "authors": [
+      "Jinjin Zhang",
+      "Wei Wang",
+      "Di Huang",
+      "Qingjie Liu",
+      "Yunhong Wang"
+    ],
+    "abstract": "Deep learning based methods have achieved surprising progress in Scene Text Recognition (STR), one of classic problems in computer vision. In this paper, we propose a feasible framework for multi-lingual arbitrary-shaped STR, including instance segmentation based text detection and language model based attention mechanism for text recognition. Our STR algorithm not only recognizes Latin and Non-Latin characters, but also supports arbitrary-shaped text recognition. Our method wins the championship on Scene Text Spotting Task (Latin Only, Latin and Chinese) of ICDAR2019 Robust Reading Challenge on ArbitraryShaped Text Competition. Code is available at https://github.com/zhang0jhon/AttentionOCR.",
+    "published": "2019-12-10",
+    "pdf_url": "https://arxiv.org/pdf/1912.04561v2",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2410.08740v2",
+    "title": "Hespi: A pipeline for automatically detecting information from hebarium specimen sheets",
+    "authors": [
+      "Robert Turnbull",
+      "Emily Fitzgerald",
+      "Karen Thompson",
+      "Joanne L. Birch"
+    ],
+    "abstract": "Specimen-associated biodiversity data are crucial for biological, environmental, and conservation sciences. A rate shift is needed to extract data from specimen images efficiently, moving beyond human-mediated transcription. We developed `Hespi' (HErbarium Specimen sheet PIpeline) using advanced computer vision techniques to extract pre-catalogue data from primary specimen labels on herbarium specimens. Hespi integrates two object detection models: one for detecting the components of the sheet and another for fields on the primary primary specimen label. It classifies labels as printed, typed, handwritten, or mixed and uses Optical Character Recognition (OCR) and Handwritten Text Recognition (HTR) for extraction. The text is then corrected against authoritative taxon databases and refined using a multimodal Large Language Model (LLM). Hespi accurately detects and extracts text from specimen sheets across international herbaria, and its modular design allows users to train and integrate custom models.",
+    "published": "2024-10-11",
+    "pdf_url": "https://arxiv.org/pdf/2410.08740v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.IR"
+    ]
+  },
+  {
+    "arxiv_id": "1911.01577v2",
+    "title": "Improving Long Handwritten Text Line Recognition with Convolutional Multi-way Associative Memory",
+    "authors": [
+      "Duc Nguyen",
+      "Nhan Tran",
+      "Hung Le"
+    ],
+    "abstract": "Convolutional Recurrent Neural Networks (CRNNs) excel at scene text recognition. Unfortunately, they are likely to suffer from vanishing/exploding gradient problems when processing long text images, which are commonly found in scanned documents. This poses a major challenge to goal of completely solving Optical Character Recognition (OCR) problem. Inspired by recently proposed memory-augmented neural networks (MANNs) for long-term sequential modeling, we present a new architecture dubbed Convolutional Multi-way Associative Memory (CMAM) to tackle the limitation of current CRNNs. By leveraging recent memory accessing mechanisms in MANNs, our architecture demonstrates superior performance against other CRNN counterparts in three real-world long text OCR datasets.",
+    "published": "2019-11-05",
+    "pdf_url": "https://arxiv.org/pdf/1911.01577v2",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2408.14998v2",
+    "title": "FastTextSpotter: A High-Efficiency Transformer for Multilingual Scene Text Spotting",
+    "authors": [
+      "Alloy Das",
+      "Sanket Biswas",
+      "Umapada Pal",
+      "Josep Llad\u00f3s",
+      "Saumik Bhattacharya"
+    ],
+    "abstract": "The proliferation of scene text in both structured and unstructured environments presents significant challenges in optical character recognition (OCR), necessitating more efficient and robust text spotting solutions. This paper presents FastTextSpotter, a framework that integrates a Swin Transformer visual backbone with a Transformer Encoder-Decoder architecture, enhanced by a novel, faster self-attention unit, SAC2, to improve processing speeds while maintaining accuracy. FastTextSpotter has been validated across multiple datasets, including ICDAR2015 for regular texts and CTW1500 and TotalText for arbitrary-shaped texts, benchmarking against current state-of-the-art models. Our results indicate that FastTextSpotter not only achieves superior accuracy in detecting and recognizing multilingual scene text (English and Vietnamese) but also improves model efficiency, thereby setting new benchmarks in the field. This study underscores the potential of advanced transformer architectures in improving the adaptability and speed of text spotting applications in diverse real-world settings. The dataset, code, and pre-trained models have been released in our Github.",
+    "published": "2024-08-27",
+    "pdf_url": "https://arxiv.org/pdf/2408.14998v2",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "1912.10205v1",
+    "title": "Decoupled Attention Network for Text Recognition",
+    "authors": [
+      "Tianwei Wang",
+      "Yuanzhi Zhu",
+      "Lianwen Jin",
+      "Canjie Luo",
+      "Xiaoxue Chen",
+      "Yaqiang Wu",
+      "Qianying Wang",
+      "Mingxiang Cai"
+    ],
+    "abstract": "Text recognition has attracted considerable research interests because of its various applications. The cutting-edge text recognition methods are based on attention mechanisms. However, most of attention methods usually suffer from serious alignment problem due to its recurrency alignment operation, where the alignment relies on historical decoding results. To remedy this issue, we propose a decoupled attention network (DAN), which decouples the alignment operation from using historical decoding results. DAN is an effective, flexible and robust end-to-end text recognizer, which consists of three components: 1) a feature encoder that extracts visual features from the input image; 2) a convolutional alignment module that performs the alignment operation based on visual features from the encoder; and 3) a decoupled text decoder that makes final prediction by jointly using the feature map and attention maps. Experimental results show that DAN achieves state-of-the-art performance on multiple text recognition tasks, including offline handwritten text recognition and regular/irregular scene text recognition.",
+    "published": "2019-12-21",
+    "pdf_url": "https://arxiv.org/pdf/1912.10205v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "1909.07145v1",
+    "title": "ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text (RRC-ArT)",
+    "authors": [
+      "Chee-Kheng Chng",
+      "Yuliang Liu",
+      "Yipeng Sun",
+      "Chun Chet Ng",
+      "Canjie Luo",
+      "Zihan Ni",
+      "ChuanMing Fang",
+      "Shuaitao Zhang",
+      "Junyu Han",
+      "Errui Ding",
+      "Jingtuo Liu",
+      "Dimosthenis Karatzas",
+      "Chee Seng Chan",
+      "Lianwen Jin"
+    ],
+    "abstract": "This paper reports the ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text (RRC-ArT) that consists of three major challenges: i) scene text detection, ii) scene text recognition, and iii) scene text spotting. A total of 78 submissions from 46 unique teams/individuals were received for this competition. The top performing score of each challenge is as follows: i) T1 - 82.65%, ii) T2.1 - 74.3%, iii) T2.2 - 85.32%, iv) T3.1 - 53.86%, and v) T3.2 - 54.91%. Apart from the results, this paper also details the ArT dataset, tasks description, evaluation metrics and participants methods. The dataset, the evaluation kit as well as the results are publicly available at https://rrc.cvc.uab.es/?ch=14",
+    "published": "2019-09-16",
+    "pdf_url": "https://arxiv.org/pdf/1909.07145v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2202.12687v1",
+    "title": "Improving Amharic Handwritten Word Recognition Using Auxiliary Task",
+    "authors": [
+      "Mesay Samuel Gondere",
+      "Lars Schmidt-Thieme",
+      "Durga Prasad Sharma",
+      "Abiot Sinamo Boltena"
+    ],
+    "abstract": "Amharic is one of the official languages of the Federal Democratic Republic of Ethiopia. It is one of the languages that use an Ethiopic script which is derived from Gee'z, ancient and currently a liturgical language. Amharic is also one of the most widely used literature-rich languages of Ethiopia. There are very limited innovative and customized research works in Amharic optical character recognition (OCR) in general and Amharic handwritten text recognition in particular. In this study, Amharic handwritten word recognition will be investigated. State-of-the-art deep learning techniques including convolutional neural networks together with recurrent neural networks and connectionist temporal classification (CTC) loss were used to make the recognition in an end-to-end fashion. More importantly, an innovative way of complementing the loss function using the auxiliary task from the row-wise similarities of the Amharic alphabet was tested to show a significant recognition improvement over a baseline method. Such findings will promote innovative problem-specific solutions as well as will open insight to a generalized solution that emerges from problem-specific domains.",
+    "published": "2022-02-25",
+    "pdf_url": "https://arxiv.org/pdf/2202.12687v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2512.18865v1",
+    "title": "Application of deep learning approaches for medieval historical documents transcription",
+    "authors": [
+      "Maksym Voloshchuk",
+      "Bohdana Zarembovska",
+      "Mykola Kozlenko"
+    ],
+    "abstract": "Handwritten text recognition and optical character recognition solutions show excellent results with processing data of modern era, but efficiency drops with Latin documents of medieval times. This paper presents a deep learning method to extract text information from handwritten Latin-language documents of the 9th to 11th centuries. The approach takes into account the properties inherent in medieval documents. The paper provides a brief introduction to the field of historical document transcription, a first-sight analysis of the raw data, and the related works and studies. The paper presents the steps of dataset development for further training of the models. The explanatory data analysis of the processed data is provided as well. The paper explains the pipeline of deep learning models to extract text information from the document images, from detecting objects to word recognition using classification models and embedding word images. The paper reports the following results: recall, precision, F1 score, intersection over union, confusion matrix, and mean string distance. The plots of the metrics are also included. The implementation is published on the GitHub repository.",
+    "published": "2025-12-21",
+    "pdf_url": "https://arxiv.org/pdf/2512.18865v1",
+    "categories": [
+      "cs.CV",
+      "cs.CL",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2102.06732v1",
+    "title": "Towards Robust Visual Information Extraction in Real World: New Dataset and Novel Solution",
+    "authors": [
+      "Jiapeng Wang",
+      "Chongyu Liu",
+      "Lianwen Jin",
+      "Guozhi Tang",
+      "Jiaxin Zhang",
+      "Shuaitao Zhang",
+      "Qianying Wang",
+      "Yaqiang Wu",
+      "Mingxiang Cai"
+    ],
+    "abstract": "Visual information extraction (VIE) has attracted considerable attention recently owing to its various advanced applications such as document understanding, automatic marking and intelligent education. Most existing works decoupled this problem into several independent sub-tasks of text spotting (text detection and recognition) and information extraction, which completely ignored the high correlation among them during optimization. In this paper, we propose a robust visual information extraction system (VIES) towards real-world scenarios, which is a unified end-to-end trainable framework for simultaneous text detection, recognition and information extraction by taking a single document image as input and outputting the structured information. Specifically, the information extraction branch collects abundant visual and semantic representations from text spotting for multimodal feature fusion and conversely, provides higher-level semantic clues to contribute to the optimization of text spotting. Moreover, regarding the shortage of public benchmarks, we construct a fully-annotated dataset called EPHOIE (https://github.com/HCIILAB/EPHOIE), which is the first Chinese benchmark for both text spotting and visual information extraction. EPHOIE consists of 1,494 images of examination paper head with complex layouts and background, including a total of 15,771 Chinese handwritten or printed text instances. Compared with the state-of-the-art methods, our VIES shows significant superior performance on the EPHOIE dataset and achieves a 9.01% F-score gain on the widely used SROIE dataset under the end-to-end scenario.",
+    "published": "2021-01-24",
+    "pdf_url": "https://arxiv.org/pdf/2102.06732v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.IR",
+      "cs.LG",
+      "cs.MM"
+    ]
+  },
+  {
+    "arxiv_id": "2211.10578v2",
+    "title": "ABINet++: Autonomous, Bidirectional and Iterative Language Modeling for Scene Text Spotting",
+    "authors": [
+      "Shancheng Fang",
+      "Zhendong Mao",
+      "Hongtao Xie",
+      "Yuxin Wang",
+      "Chenggang Yan",
+      "Yongdong Zhang"
+    ],
+    "abstract": "Scene text spotting is of great importance to the computer vision community due to its wide variety of applications. Recent methods attempt to introduce linguistic knowledge for challenging recognition rather than pure visual classification. However, how to effectively model the linguistic rules in end-to-end deep networks remains a research challenge. In this paper, we argue that the limited capacity of language models comes from 1) implicit language modeling; 2) unidirectional feature representation; and 3) language model with noise input. Correspondingly, we propose an autonomous, bidirectional and iterative ABINet++ for scene text spotting. Firstly, the autonomous suggests enforcing explicitly language modeling by decoupling the recognizer into vision model and language model and blocking gradient flow between both models. Secondly, a novel bidirectional cloze network (BCN) as the language model is proposed based on bidirectional feature representation. Thirdly, we propose an execution manner of iterative correction for the language model which can effectively alleviate the impact of noise input. Finally, to polish ABINet++ in long text recognition, we propose to aggregate horizontal features by embedding Transformer units inside a U-Net, and design a position and content attention module which integrates character order and content to attend to character features precisely. ABINet++ achieves state-of-the-art performance on both scene text recognition and scene text spotting benchmarks, which consistently demonstrates the superiority of our method in various environments especially on low-quality images. Besides, extensive experiments including in English and Chinese also prove that, a text spotter that incorporates our language modeling method can significantly improve its performance both in accuracy and speed compared with commonly used attention-based recognizers.",
+    "published": "2022-11-19",
+    "pdf_url": "https://arxiv.org/pdf/2211.10578v2",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2408.14805v1",
+    "title": "Platypus: A Generalized Specialist Model for Reading Text in Various Forms",
+    "authors": [
+      "Peng Wang",
+      "Zhaohai Li",
+      "Jun Tang",
+      "Humen Zhong",
+      "Fei Huang",
+      "Zhibo Yang",
+      "Cong Yao"
+    ],
+    "abstract": "Reading text from images (either natural scenes or documents) has been a long-standing research topic for decades, due to the high technical challenge and wide application range. Previously, individual specialist models are developed to tackle the sub-tasks of text reading (e.g., scene text recognition, handwritten text recognition and mathematical expression recognition). However, such specialist models usually cannot effectively generalize across different sub-tasks. Recently, generalist models (such as GPT-4V), trained on tremendous data in a unified way, have shown enormous potential in reading text in various scenarios, but with the drawbacks of limited accuracy and low efficiency. In this work, we propose Platypus, a generalized specialist model for text reading. Specifically, Platypus combines the best of both worlds: being able to recognize text of various forms with a single unified architecture, while achieving excellent accuracy and high efficiency. To better exploit the advantage of Platypus, we also construct a text reading dataset (called Worms), the images of which are curated from previous datasets and partially re-labeled. Experiments on standard benchmarks demonstrate the effectiveness and superiority of the proposed Platypus model. Model and data will be made publicly available at https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/Platypus.",
+    "published": "2024-08-27",
+    "pdf_url": "https://arxiv.org/pdf/2408.14805v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2401.00028v3",
+    "title": "An Empirical Study of Scaling Law for OCR",
+    "authors": [
+      "Miao Rang",
+      "Zhenni Bi",
+      "Chuanjian Liu",
+      "Yunhe Wang",
+      "Kai Han"
+    ],
+    "abstract": "The laws of model size, data volume, computation and model performance have been extensively studied in the field of Natural Language Processing (NLP). However, the scaling laws in Optical Character Recognition (OCR) have not yet been investigated. To address this, we conducted comprehensive studies that involved examining the correlation between performance and the scale of models, data volume and computation in the field of text recognition.Conclusively, the study demonstrates smooth power laws between performance and model size, as well as training data volume, when other influencing factors are held constant. Additionally, we have constructed a large-scale dataset called REBU-Syn, which comprises 6 million real samples and 18 million synthetic samples. Based on our scaling law and new dataset, we have successfully trained a scene text recognition model, achieving a new state-ofthe-art on 6 common test benchmarks with a top-1 average accuracy of 97.42%. The models and dataset are publicly available at https://github.com/large-ocr-model/large-ocr-model.github.io.",
+    "published": "2023-12-29",
+    "pdf_url": "https://arxiv.org/pdf/2401.00028v3",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2309.01131v1",
+    "title": "Attention Where It Matters: Rethinking Visual Document Understanding with Selective Region Concentration",
+    "authors": [
+      "Haoyu Cao",
+      "Changcun Bao",
+      "Chaohu Liu",
+      "Huang Chen",
+      "Kun Yin",
+      "Hao Liu",
+      "Yinsong Liu",
+      "Deqiang Jiang",
+      "Xing Sun"
+    ],
+    "abstract": "We propose a novel end-to-end document understanding model called SeRum (SElective Region Understanding Model) for extracting meaningful information from document images, including document analysis, retrieval, and office automation. Unlike state-of-the-art approaches that rely on multi-stage technical schemes and are computationally expensive, SeRum converts document image understanding and recognition tasks into a local decoding process of the visual tokens of interest, using a content-aware token merge module. This mechanism enables the model to pay more attention to regions of interest generated by the query decoder, improving the model's effectiveness and speeding up the decoding speed of the generative scheme. We also designed several pre-training tasks to enhance the understanding and local awareness of the model. Experimental results demonstrate that SeRum achieves state-of-the-art performance on document understanding tasks and competitive results on text spotting tasks. SeRum represents a substantial advancement towards enabling efficient and effective end-to-end document understanding.",
+    "published": "2023-09-03",
+    "pdf_url": "https://arxiv.org/pdf/2309.01131v1",
+    "categories": [
+      "cs.CV",
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2105.03906v3",
+    "title": "TextAdaIN: Paying Attention to Shortcut Learning in Text Recognizers",
+    "authors": [
+      "Oren Nuriel",
+      "Sharon Fogel",
+      "Ron Litman"
+    ],
+    "abstract": "Leveraging the characteristics of convolutional layers, neural networks are extremely effective for pattern recognition tasks. However in some cases, their decisions are based on unintended information leading to high performance on standard benchmarks but also to a lack of generalization to challenging testing conditions and unintuitive failures. Recent work has termed this \"shortcut learning\" and addressed its presence in multiple domains. In text recognition, we reveal another such shortcut, whereby recognizers overly depend on local image statistics. Motivated by this, we suggest an approach to regulate the reliance on local statistics that improves text recognition performance. Our method, termed TextAdaIN, creates local distortions in the feature map which prevent the network from overfitting to local statistics. It does so by viewing each feature map as a sequence of elements and deliberately mismatching fine-grained feature statistics between elements in a mini-batch. Despite TextAdaIN's simplicity, extensive experiments show its effectiveness compared to other, more complicated methods. TextAdaIN achieves state-of-the-art results on standard handwritten text recognition benchmarks. It generalizes to multiple architectures and to the domain of scene text recognition. Furthermore, we demonstrate that integrating TextAdaIN improves robustness towards more challenging testing conditions. The official Pytorch implementation can be found at https://github.com/amazon-research/textadain-robust-recognition.",
+    "published": "2021-05-09",
+    "pdf_url": "https://arxiv.org/pdf/2105.03906v3",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2402.08025v1",
+    "title": "Beyond the Mud: Datasets and Benchmarks for Computer Vision in Off-Road Racing",
+    "authors": [
+      "Jacob Tyo",
+      "Motolani Olarinre",
+      "Youngseog Chung",
+      "Zachary C. Lipton"
+    ],
+    "abstract": "Despite significant progress in optical character recognition (OCR) and computer vision systems, robustly recognizing text and identifying people in images taken in unconstrained \\emph{in-the-wild} environments remain an ongoing challenge. However, such obstacles must be overcome in practical applications of vision systems, such as identifying racers in photos taken during off-road racing events. To this end, we introduce two new challenging real-world datasets - the off-road motorcycle Racer Number Dataset (RND) and the Muddy Racer re-iDentification Dataset (MUDD) - to highlight the shortcomings of current methods and drive advances in OCR and person re-identification (ReID) under extreme conditions. These two datasets feature over 6,300 images taken during off-road competitions which exhibit a variety of factors that undermine even modern vision systems, namely mud, complex poses, and motion blur. We establish benchmark performance on both datasets using state-of-the-art models. Off-the-shelf models transfer poorly, reaching only 15% end-to-end (E2E) F1 score on text spotting, and 33% rank-1 accuracy on ReID. Fine-tuning yields major improvements, bringing model performance to 53% F1 score for E2E text spotting and 79% rank-1 accuracy on ReID, but still falls short of good performance. Our analysis exposes open problems in real-world OCR and ReID that necessitate domain-targeted techniques. With these datasets and analysis of model limitations, we aim to foster innovations in handling real-world conditions like mud and complex poses to drive progress in robust computer vision. All data was sourced from PerformancePhoto.co, a website used by professional motorsports photographers, racers, and fans. The top-performing text spotting and ReID models are deployed on this platform to power real-time race photo search.",
+    "published": "2024-02-12",
+    "pdf_url": "https://arxiv.org/pdf/2402.08025v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2209.06717v1",
+    "title": "Out-of-Vocabulary Challenge Report",
+    "authors": [
+      "Sergi Garcia-Bordils",
+      "Andr\u00e9s Mafla",
+      "Ali Furkan Biten",
+      "Oren Nuriel",
+      "Aviad Aberdam",
+      "Shai Mazor",
+      "Ron Litman",
+      "Dimosthenis Karatzas"
+    ],
+    "abstract": "This paper presents final results of the Out-Of-Vocabulary 2022 (OOV) challenge. The OOV contest introduces an important aspect that is not commonly studied by Optical Character Recognition (OCR) models, namely, the recognition of unseen scene text instances at training time. The competition compiles a collection of public scene text datasets comprising of 326,385 images with 4,864,405 scene text instances, thus covering a wide range of data distributions. A new and independent validation and test set is formed with scene text instances that are out of vocabulary at training time. The competition was structured in two tasks, end-to-end and cropped scene text recognition respectively. A thorough analysis of results from baselines and different participants is presented. Interestingly, current state-of-the-art models show a significant performance gap under the newly studied setting. We conclude that the OOV dataset proposed in this challenge will be an essential area to be explored in order to develop scene text models that achieve more robust and generalized predictions.",
+    "published": "2022-09-14",
+    "pdf_url": "https://arxiv.org/pdf/2209.06717v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2205.14100v5",
+    "title": "GIT: A Generative Image-to-text Transformer for Vision and Language",
+    "authors": [
+      "Jianfeng Wang",
+      "Zhengyuan Yang",
+      "Xiaowei Hu",
+      "Linjie Li",
+      "Kevin Lin",
+      "Zhe Gan",
+      "Zicheng Liu",
+      "Ce Liu",
+      "Lijuan Wang"
+    ],
+    "abstract": "In this paper, we design and train a Generative Image-to-text Transformer, GIT, to unify vision-language tasks such as image/video captioning and question answering. While generative models provide a consistent network architecture between pre-training and fine-tuning, existing work typically contains complex structures (uni/multi-modal encoder/decoder) and depends on external modules such as object detectors/taggers and optical character recognition (OCR). In GIT, we simplify the architecture as one image encoder and one text decoder under a single language modeling task. We also scale up the pre-training data and the model size to boost the model performance. Without bells and whistles, our GIT establishes new state of the arts on 12 challenging benchmarks with a large margin. For instance, our model surpasses the human performance for the first time on TextCaps (138.2 vs. 125.5 in CIDEr). Furthermore, we present a new scheme of generation-based image classification and scene text recognition, achieving decent performance on standard benchmarks. Codes are released at \\url{https://github.com/microsoft/GenerativeImage2Text}.",
+    "published": "2022-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2205.14100v5",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2103.05105v1",
+    "title": "Urdu Handwritten Text Recognition Using ResNet18",
+    "authors": [
+      "Muhammad Kashif"
+    ],
+    "abstract": "Handwritten text recognition is an active research area in the field of deep learning and artificial intelligence to convert handwritten text into machine-understandable. A lot of work has been done for other languages, especially for English, but work for the Urdu language is very minimal due to the cursive nature of Urdu characters. The need for Urdu HCR systems is increasing because of the advancement of technology. In this paper, we propose a ResNet18 model for handwritten text recognition using Urdu Nastaliq Handwritten Dataset (UNHD) which contains 3,12000 words written by 500 candidates.",
+    "published": "2021-02-19",
+    "pdf_url": "https://arxiv.org/pdf/2103.05105v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2003.10557v1",
+    "title": "ScrabbleGAN: Semi-Supervised Varying Length Handwritten Text Generation",
+    "authors": [
+      "Sharon Fogel",
+      "Hadar Averbuch-Elor",
+      "Sarel Cohen",
+      "Shai Mazor",
+      "Roee Litman"
+    ],
+    "abstract": "Optical character recognition (OCR) systems performance have improved significantly in the deep learning era. This is especially true for handwritten text recognition (HTR), where each author has a unique style, unlike printed text, where the variation is smaller by design. That said, deep learning based HTR is limited, as in every other task, by the number of training examples. Gathering data is a challenging and costly task, and even more so, the labeling task that follows, of which we focus here. One possible approach to reduce the burden of data annotation is semi-supervised learning. Semi supervised methods use, in addition to labeled data, some unlabeled samples to improve performance, compared to fully supervised ones. Consequently, such methods may adapt to unseen images during test time. We present ScrabbleGAN, a semi-supervised approach to synthesize handwritten text images that are versatile both in style and lexicon. ScrabbleGAN relies on a novel generative model which can generate images of words with an arbitrary length. We show how to operate our approach in a semi-supervised manner, enjoying the aforementioned benefits such as performance boost over state of the art supervised HTR. Furthermore, our generator can manipulate the resulting text style. This allows us to change, for instance, whether the text is cursive, or how thin is the pen stroke.",
+    "published": "2020-03-23",
+    "pdf_url": "https://arxiv.org/pdf/2003.10557v1",
+    "categories": [
+      "cs.CV",
+      "cs.CL",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2603.25761v1",
+    "title": "A Survey of OCR Evaluation Methods and Metrics and the Invisibility of Historical Documents",
+    "authors": [
+      "Fitsum Sileshi Beyene",
+      "Christopher L. Dancy"
+    ],
+    "abstract": "Optical character recognition (OCR) and document understanding systems increasingly rely on large vision and vision-language models, yet evaluation remains centered on modern, Western, and institutional documents. This emphasis masks system behavior in historical and marginalized archives, where layout, typography, and material degradation shape interpretation. This study examines how OCR and document understanding systems are evaluated, with particular attention to Black historical newspapers. We review OCR and document understanding papers, as well as benchmark datasets, which are published between 2006 and 2025 using the PRISMA framework. We look into how the studies report training data, benchmark design, and evaluation metrics for vision transformer and multimodal OCR systems. During the review, we found that Black newspapers and other community-produced historical documents rarely appear in reported training data or evaluation benchmarks. Most evaluations emphasize character accuracy and task success on modern layouts. They rarely capture structural failures common in historical newspapers, including column collapse, typographic errors, and hallucinated text. To put these findings into perspective, we use previous empirical studies and archival statistics from significant Black press collections to show how evaluation gaps lead to structural invisibility and representational harm. We propose that these gaps occur due to organizational (meso) and institutional (macro) behaviors and structure, shaped by benchmark incentives and data governance decisions.",
+    "published": "2026-03-26",
+    "pdf_url": "https://arxiv.org/pdf/2603.25761v1",
+    "categories": [
+      "cs.CV",
+      "cs.DL"
+    ]
+  },
+  {
+    "arxiv_id": "2606.16015v1",
+    "title": "Stringalign: Moving beyond summary statistics with a transparent Unicode-aware tool for evaluating automatic transcription models",
+    "authors": [
+      "Yngve Mardal Moe",
+      "Marie Roald"
+    ],
+    "abstract": "Comparing text strings is crucial when evaluating and understanding the performance of various text processing tasks such as document recognition and audio transcription. With an increasingly complex landscape of AI-based handwritten text recognition (HTR), optical character recognition (OCR) and automatic speech recognition (ASR) models, there is a need for tools that facilitate evaluation in a flexible and reproducible way. This paper presents Stringalign, a Python library designed to simplify the evaluation process for automatic transcription projects and facilitate transparent evaluation. Stringalign's tools to examine and visualise both the rate of errors and the types of errors a model makes, give insights into possible improvements and help inform model selection for a particular task. Widely used string comparison metrics, such as the character and word error rates (CER and WER), although useful, can be ambiguous due to varying definitions of what constitutes a character and a word. Stringalign addresses this challenge by ensuring all preprocessing (i.e. normalisation and tokenisation) is transparent and easily replicable, and by providing tools to move beyond summary statistics and analyse common model errors. Moreover, Stringalign adheres to FAIR (Findable, Accessible, Interoperable, and Reusable) principles for research software while staying lightweight and easy to adapt into researchers existing workflows. In this paper, we discuss challenges with character and word level string comparisons and show through examples that where existing tools can yield opaque and sometimes confusing results, Stringalign provides an easy-to-use and unambiguous alternative.",
+    "published": "2026-06-14",
+    "pdf_url": "https://arxiv.org/pdf/2606.16015v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2403.04473v2",
+    "title": "TextMonkey: An OCR-Free Large Multimodal Model for Understanding Document",
+    "authors": [
+      "Yuliang Liu",
+      "Biao Yang",
+      "Qiang Liu",
+      "Zhang Li",
+      "Zhiyin Ma",
+      "Shuo Zhang",
+      "Xiang Bai"
+    ],
+    "abstract": "We present TextMonkey, a large multimodal model (LMM) tailored for text-centric tasks. Our approach introduces enhancement across several dimensions: By adopting Shifted Window Attention with zero-initialization, we achieve cross-window connectivity at higher input resolutions and stabilize early training; We hypothesize that images may contain redundant tokens, and by using similarity to filter out significant tokens, we can not only streamline the token length but also enhance the model's performance. Moreover, by expanding our model's capabilities to encompass text spotting and grounding, and incorporating positional information into responses, we enhance interpretability. It also learns to perform screenshot tasks through finetuning. Evaluation on 12 benchmarks shows notable improvements: 5.2% in Scene Text-Centric tasks (including STVQA, TextVQA, and OCRVQA), 6.9% in Document-Oriented tasks (such as DocVQA, InfoVQA, ChartVQA, DeepForm, Kleister Charity, and WikiTableQuestions), and 2.8% in Key Information Extraction tasks (comprising FUNSD, SROIE, and POIE). It outperforms in scene text spotting with a 10.9\\% increase and sets a new standard on OCRBench, a comprehensive benchmark consisting of 29 OCR-related assessments, with a score of 561, surpassing previous open-sourced large multimodal models for document understanding. Code will be released at https://github.com/Yuliang-Liu/Monkey.",
+    "published": "2024-03-07",
+    "pdf_url": "https://arxiv.org/pdf/2403.04473v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2605.18818v1",
+    "title": "Operationalizing Document AI: A Microservice Architecture for OCR and LLM Pipelines in Production",
+    "authors": [
+      "Yao Fehlis",
+      "Benjamin Bengfort",
+      "Zhangzhang Si",
+      "Vahid Eyorokon",
+      "Prema Roman",
+      "Patrick Deziel",
+      "Devon Slonaker",
+      "Steve Veldman",
+      "Ben Johnson",
+      "Joyce Rigelo",
+      "Michael Wharton",
+      "Steve Kramer"
+    ],
+    "abstract": "Academic research tends to focus on new models for document understanding creating a wide gap in the literature between model definition and running models at production scale. To close that gap, we present a microservice architecture that encapsulates pipelines of multiple models for classification, optical character recognition (OCR), and large language model structured field extraction as well as our experience running this pipeline on thousands of multi-page documents per hour. We describe our primary design decisions, including a hybrid classification, separation of GPU-bound inference from CPU-bound orchestration, use of asynchronous processing for the many IO-bound operations in the pipeline, and an independent, horizontal scaling strategy. Using batch profiling, we identified two surprising qualitative findings that shape production deployments: OCR, not language-model parsing, dominates end-to-end latency, and the system saturates at a concurrency determined by shared GPU-inference capacity rather than worker count. Our goal is to provide practitioners with concrete architectural patterns for building document understanding systems that work beyond the benchmark; effectively operationalizing models in production.",
+    "published": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.18818v1",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.SE"
+    ]
+  },
+  {
+    "arxiv_id": "2604.10077v2",
+    "title": "DocRevive: A Unified Pipeline for Document Text Restoration",
+    "authors": [
+      "Kunal Purkayastha",
+      "Ayan Banerjee",
+      "Josep Llados",
+      "Umapada Pal"
+    ],
+    "abstract": "In Document Understanding, the challenge of reconstructing damaged, occluded, or incomplete text remains a critical yet unexplored problem. Subsequent document understanding tasks can benefit from a document reconstruction process. In response, this paper presents a novel unified pipeline combining state-of-the-art Optical Character Recognition (OCR), advanced image analysis, masked language modeling, and diffusion-based models to restore and reconstruct text while preserving visual integrity. We create a synthetic dataset of 30{,}078 degraded document images that simulates diverse document degradation scenarios, setting a benchmark for restoration tasks. Our pipeline detects and recognizes text, identifies degradation with an occlusion detector, and uses an inpainting model for semantically coherent reconstruction. A diffusion-based module seamlessly reintegrates text, matching font, size, and alignment. To evaluate restoration quality, we propose a Unified Context Similarity Metric (UCSM), incorporating edit, semantic, and length similarities with a contextual predictability measure that penalizes deviations when the correct text is contextually obvious. Our work advances document restoration, benefiting archival research and digital preservation while setting a new standard for text reconstruction. The OPRB dataset and code are available at \\href{https://huggingface.co/datasets/kpurkayastha/OPRB}{Hugging Face} and \\href{https://github.com/kunalpurkayastha/DocRevive}{Github} respectively.",
+    "published": "2026-04-11",
+    "pdf_url": "https://arxiv.org/pdf/2604.10077v2",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2404.12734v4",
+    "title": "Mixed Text Recognition with Efficient Parameter Fine-Tuning and Transformer",
+    "authors": [
+      "Da Chang",
+      "Yu Li"
+    ],
+    "abstract": "With the rapid development of OCR technology, mixed-scene text recognition has become a key technical challenge. Although deep learning models have achieved significant results in specific scenarios, their generality and stability still need improvement, and the high demand for computing resources affects flexibility. To address these issues, this paper proposes DLoRA-TrOCR, a parameter-efficient hybrid text spotting method based on a pre-trained OCR Transformer. By embedding a weight-decomposed DoRA module in the image encoder and a LoRA module in the text decoder, this method can be efficiently fine-tuned on various downstream tasks. Our method requires no more than 0.7\\% trainable parameters, not only accelerating the training efficiency but also significantly improving the recognition accuracy and cross-dataset generalization performance of the OCR system in mixed text scenes. Experiments show that our proposed DLoRA-TrOCR outperforms other parameter-efficient fine-tuning methods in recognizing complex scenes with mixed handwritten, printed, and street text, achieving a CER of 4.02 on the IAM dataset, a F1 score of 94.29 on the SROIE dataset, and a WAR of 86.70 on the STR Benchmark, reaching state-of-the-art performance.",
+    "published": "2024-04-19",
+    "pdf_url": "https://arxiv.org/pdf/2404.12734v4",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2210.00503v1",
+    "title": "DARE: A large-scale handwritten date recognition system",
+    "authors": [
+      "Christian M. Dahl",
+      "Torben S. D. Johansen",
+      "Emil N. S\u00f8rensen",
+      "Christian E. Westermann",
+      "Simon F. Wittrock"
+    ],
+    "abstract": "Handwritten text recognition for historical documents is an important task but it remains difficult due to a lack of sufficient training data in combination with a large variability of writing styles and degradation of historical documents. While recurrent neural network architectures are commonly used for handwritten text recognition, they are often computationally expensive to train and the benefit of recurrence drastically differs by task. For these reasons, it is important to consider non-recurrent architectures. In the context of handwritten date recognition, we propose an architecture based on the EfficientNetV2 class of models that is fast to train, robust to parameter choices, and accurately transcribes handwritten dates from a number of sources. For training, we introduce a database containing almost 10 million tokens, originating from more than 2.2 million handwritten dates which are segmented from different historical documents. As dates are some of the most common information on historical documents, and with historical archives containing millions of such documents, the efficient and automatic transcription of dates has the potential to lead to significant cost-savings over manual transcription. We show that training on handwritten text with high variability in writing styles result in robust models for general handwritten text recognition and that transfer learning from the DARE system increases transcription accuracy substantially, allowing one to obtain high accuracy even when using a relatively small training sample.",
+    "published": "2022-10-02",
+    "pdf_url": "https://arxiv.org/pdf/2210.00503v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2509.18081v1",
+    "title": "GraDeT-HTR: A Resource-Efficient Bengali Handwritten Text Recognition System utilizing Grapheme-based Tokenizer and Decoder-only Transformer",
+    "authors": [
+      "Md. Mahmudul Hasan",
+      "Ahmed Nesar Tahsin Choudhury",
+      "Mahmudul Hasan",
+      "Md. Mosaddek Khan"
+    ],
+    "abstract": "Despite Bengali being the sixth most spoken language in the world, handwritten text recognition (HTR) systems for Bengali remain severely underdeveloped. The complexity of Bengali script--featuring conjuncts, diacritics, and highly variable handwriting styles--combined with a scarcity of annotated datasets makes this task particularly challenging. We present GraDeT-HTR, a resource-efficient Bengali handwritten text recognition system based on a Grapheme-aware Decoder-only Transformer architecture. To address the unique challenges of Bengali script, we augment the performance of a decoder-only transformer by integrating a grapheme-based tokenizer and demonstrate that it significantly improves recognition accuracy compared to conventional subword tokenizers. Our model is pretrained on large-scale synthetic data and fine-tuned on real human-annotated samples, achieving state-of-the-art performance on multiple benchmark datasets.",
+    "published": "2025-09-22",
+    "pdf_url": "https://arxiv.org/pdf/2509.18081v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "1911.08400v1",
+    "title": "KISS: Keeping It Simple for Scene Text Recognition",
+    "authors": [
+      "Christian Bartz",
+      "Joseph Bethge",
+      "Haojin Yang",
+      "Christoph Meinel"
+    ],
+    "abstract": "Over the past few years, several new methods for scene text recognition have been proposed. Most of these methods propose novel building blocks for neural networks. These novel building blocks are specially tailored for the task of scene text recognition and can thus hardly be used in any other tasks. In this paper, we introduce a new model for scene text recognition that only consists of off-the-shelf building blocks for neural networks. Our model (KISS) consists of two ResNet based feature extractors, a spatial transformer, and a transformer. We train our model only on publicly available, synthetic training data and evaluate it on a range of scene text recognition benchmarks, where we reach state-of-the-art or competitive performance, although our model does not use methods like 2D-attention, or image rectification.",
+    "published": "2019-11-19",
+    "pdf_url": "https://arxiv.org/pdf/1911.08400v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2105.10528v1",
+    "title": "SmartPatch: Improving Handwritten Word Imitation with Patch Discriminators",
+    "authors": [
+      "Alexander Mattick",
+      "Martin Mayr",
+      "Mathias Seuret",
+      "Andreas Maier",
+      "Vincent Christlein"
+    ],
+    "abstract": "As of recent generative adversarial networks have allowed for big leaps in the realism of generated images in diverse domains, not the least of which being handwritten text generation. The generation of realistic-looking hand-written text is important because it can be used for data augmentation in handwritten text recognition (HTR) systems or human-computer interaction. We propose SmartPatch, a new technique increasing the performance of current state-of-the-art methods by augmenting the training feedback with a tailored solution to mitigate pen-level artifacts. We combine the well-known patch loss with information gathered from the parallel trained handwritten text recognition system and the separate characters of the word. This leads to a more enhanced local discriminator and results in more realistic and higher-quality generated handwritten words.",
+    "published": "2021-05-21",
+    "pdf_url": "https://arxiv.org/pdf/2105.10528v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2311.09612v2",
+    "title": "Efficient End-to-End Visual Document Understanding with Rationale Distillation",
+    "authors": [
+      "Wang Zhu",
+      "Alekh Agarwal",
+      "Mandar Joshi",
+      "Robin Jia",
+      "Jesse Thomason",
+      "Kristina Toutanova"
+    ],
+    "abstract": "Understanding visually situated language requires interpreting complex layouts of textual and visual elements. Pre-processing tools, such as optical character recognition (OCR), can map document image inputs to textual tokens, then large language models (LLMs) can reason over text. However, such methods have high computational and engineering complexity. Can small pretrained image-to-text models accurately understand visual documents through similar recognition and reasoning steps instead? We propose Rationale Distillation (RD), which incorporates the outputs of OCR tools, LLMs, and larger multimodal models as intermediate \"rationales\", and trains a small student model to predict both rationales and answers. On three visual document understanding benchmarks representing infographics, scanned documents, and figures, our Pix2Struct (282M parameters) student model finetuned with RD outperforms the base model by 4-5% absolute accuracy with only 1% higher computational cost.",
+    "published": "2023-11-16",
+    "pdf_url": "https://arxiv.org/pdf/2311.09612v2",
+    "categories": [
+      "cs.CV",
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2010.08919v2",
+    "title": "Boosting High-Level Vision with Joint Compression Artifacts Reduction and Super-Resolution",
+    "authors": [
+      "Xiaoyu Xiang",
+      "Qian Lin",
+      "Jan P. Allebach"
+    ],
+    "abstract": "Due to the limits of bandwidth and storage space, digital images are usually down-scaled and compressed when transmitted over networks, resulting in loss of details and jarring artifacts that can lower the performance of high-level visual tasks. In this paper, we aim to generate an artifact-free high-resolution image from a low-resolution one compressed with an arbitrary quality factor by exploring joint compression artifacts reduction (CAR) and super-resolution (SR) tasks. First, we propose a context-aware joint CAR and SR neural network (CAJNN) that integrates both local and non-local features to solve CAR and SR in one-stage. Finally, a deep reconstruction network is adopted to predict high quality and high-resolution images. Evaluation on CAR and SR benchmark datasets shows that our CAJNN model outperforms previous methods and also takes 26.2% shorter runtime. Based on this model, we explore addressing two critical challenges in high-level computer vision: optical character recognition of low-resolution texts, and extremely tiny face detection. We demonstrate that CAJNN can serve as an effective image preprocessing method and improve the accuracy for real-scene text recognition (from 85.30% to 85.75%) and the average precision for tiny face detection (from 0.317 to 0.611).",
+    "published": "2020-10-18",
+    "pdf_url": "https://arxiv.org/pdf/2010.08919v2",
+    "categories": [
+      "cs.CV",
+      "cs.MM",
+      "eess.IV"
+    ]
+  },
+  {
+    "arxiv_id": "2105.07795v1",
+    "title": "STRIDE : Scene Text Recognition In-Device",
+    "authors": [
+      "Rachit S Munjal",
+      "Arun D Prabhu",
+      "Nikhil Arora",
+      "Sukumar Moharana",
+      "Gopi Ramena"
+    ],
+    "abstract": "Optical Character Recognition (OCR) systems have been widely used in various applications for extracting semantic information from images. To give the user more control over their privacy, an on-device solution is needed. The current state-of-the-art models are too heavy and complex to be deployed on-device. We develop an efficient lightweight scene text recognition (STR) system, which has only 0.88M parameters and performs real-time text recognition. Attention modules tend to boost the accuracy of STR networks but are generally slow and not optimized for device inference. So, we propose the use of convolution attention modules to the text recognition networks, which aims to provide channel and spatial attention information to the LSTM module by adding very minimal computational cost. It boosts our word accuracy on ICDAR 13 dataset by almost 2\\%. We also introduce a novel orientation classifier module, to support the simultaneous recognition of both horizontal and vertical text. The proposed model surpasses on-device metrics of inference time and memory footprint and achieves comparable accuracy when compared to the leading commercial and other open-source OCR engines. We deploy the system on-device with an inference speed of 2.44 ms per word on the Exynos 990 chipset device and achieve an accuracy of 88.4\\% on ICDAR-13 dataset.",
+    "published": "2021-05-17",
+    "pdf_url": "https://arxiv.org/pdf/2105.07795v1",
+    "categories": [
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15558v1",
+    "title": "Ocean-OCR: Towards General OCR Application via a Vision-Language Model",
+    "authors": [
+      "Song Chen",
+      "Xinyu Guo",
+      "Yadong Li",
+      "Tao Zhang",
+      "Mingan Lin",
+      "Dongdong Kuang",
+      "Youwei Zhang",
+      "Lingfeng Ming",
+      "Fengyu Zhang",
+      "Yuran Wang",
+      "Jianhua Xu",
+      "Zenan Zhou",
+      "Weipeng Chen"
+    ],
+    "abstract": "Multimodal large language models (MLLMs) have shown impressive capabilities across various domains, excelling in processing and understanding information from multiple modalities. Despite the rapid progress made previously, insufficient OCR ability hinders MLLMs from excelling in text-related tasks. In this paper, we present \\textbf{Ocean-OCR}, a 3B MLLM with state-of-the-art performance on various OCR scenarios and comparable understanding ability on general tasks. We employ Native Resolution ViT to enable variable resolution input and utilize a substantial collection of high-quality OCR datasets to enhance the model performance. We demonstrate the superiority of Ocean-OCR through comprehensive experiments on open-source OCR benchmarks and across various OCR scenarios. These scenarios encompass document understanding, scene text recognition, and handwritten recognition, highlighting the robust OCR capabilities of Ocean-OCR. Note that Ocean-OCR is the first MLLM to outperform professional OCR models such as TextIn and PaddleOCR.",
+    "published": "2025-01-26",
+    "pdf_url": "https://arxiv.org/pdf/2501.15558v1",
+    "categories": [
+      "cs.CV"
+    ]
+  }
+]

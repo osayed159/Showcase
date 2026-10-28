@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+
+# Secrets
+.env
+*.key
+
+# Downloaded papers
+data/papers/
+data/raw/
+
+# Vector index
+chroma_db/
+*.sqlite3
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Downloaded models
+.cache/
+
+# Evaluation runs (data/eval_results.json is the committed reference)
+data/eval_runs/

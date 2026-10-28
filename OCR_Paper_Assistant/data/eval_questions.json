@@ -1,0 +1,129 @@
+[
+  {
+    "id": "cer-definition",
+    "type": "definition",
+    "question": "How do you compute the character error rate of an OCR system?",
+    "relevant": [{"arxiv_id": "2606.16015v1", "page": 3}],
+    "must_include": ["insertion", "deletion", "substitution", "edit distance", "levenshtein"]
+  },
+  {
+    "id": "gpt4v-weakness",
+    "type": "finding",
+    "question": "Where does GPT-4V fall short when reading text in images?",
+    "relevant": [{"arxiv_id": "2310.16809v2", "page": 1}],
+    "must_include": ["multilingual", "non-latin", "chinese"]
+  },
+  {
+    "id": "ocr-scaling",
+    "type": "finding",
+    "question": "Does OCR accuracy keep improving as you make the model bigger?",
+    "relevant": [{"arxiv_id": "2401.00028v3", "page": 1}],
+    "must_include": ["power law"]
+  },
+  {
+    "id": "abinet-noise",
+    "type": "method",
+    "question": "How does ABINet++ stop its language model from being misled by noisy predictions?",
+    "relevant": [{"arxiv_id": "2211.10578v2", "page": 1}],
+    "must_include": ["iterative"]
+  },
+  {
+    "id": "handwritten-dates",
+    "type": "existence",
+    "question": "Has anyone built a system that transcribes dates written by hand on old documents?",
+    "relevant": [
+      {"arxiv_id": "2210.00503v1", "page": 1},
+      {"arxiv_id": "2210.00503v1", "page": 3}
+    ],
+    "must_include": ["DARE"]
+  },
+  {
+    "id": "low-light",
+    "type": "problem",
+    "question": "Why is it hard to recognise text in dark, poorly lit photos?",
+    "relevant": [{"arxiv_id": "2604.23685v1", "page": 1}],
+    "must_include": ["illumination", "noise"]
+  },
+  {
+    "id": "urdu-backbone",
+    "type": "method",
+    "question": "What CNN backbone was used to recognise handwritten Urdu?",
+    "relevant": [{"arxiv_id": "2103.05105v1", "page": 1}],
+    "must_include": ["ResNet"]
+  },
+  {
+    "id": "iam-cer-number",
+    "type": "number",
+    "question": "What error rate does the parameter-efficient fine-tuning approach reach on the IAM handwriting benchmark?",
+    "relevant": [{"arxiv_id": "2404.12734v4", "page": 1}],
+    "must_include": ["4.02"]
+  },
+  {
+    "id": "low-resource",
+    "type": "survey",
+    "question": "How can handwriting recognition work for languages without much labelled data?",
+    "relevant": [
+      {"arxiv_id": "2512.01348v1", "page": 1},
+      {"arxiv_id": "2202.12687v1", "page": 1}
+    ],
+    "must_include": ["auxiliary", "segmentation-free", "BharatOCR", "transfer learning", "multi-task"]
+  },
+  {
+    "id": "synthetic-handwriting",
+    "type": "method",
+    "question": "How can you generate synthetic handwriting images to train a recogniser?",
+    "relevant": [
+      {"arxiv_id": "2003.10557v1", "page": 1},
+      {"arxiv_id": "2105.10528v1", "page": 1}
+    ],
+    "must_include": ["GAN", "generative adversarial"]
+  },
+  {
+    "id": "bengali-tokenizer",
+    "type": "method",
+    "question": "Why tokenize Bengali handwriting into graphemes rather than individual characters?",
+    "relevant": [{"arxiv_id": "2509.18081v1", "page": 1}],
+    "must_include": ["conjunct", "diacritic"]
+  },
+  {
+    "id": "simple-str",
+    "type": "finding",
+    "question": "Can a deliberately simple architecture compete with complex scene text recognisers?",
+    "relevant": [{"arxiv_id": "1911.08400v1", "page": 1}],
+    "must_include": ["off-the-shelf", "competitive", "state-of-the-art"]
+  },
+  {
+    "id": "general-ocr-model",
+    "type": "existence",
+    "question": "Is there a general-purpose vision-language model built specifically for OCR?",
+    "relevant": [
+      {"arxiv_id": "2501.15558v1", "page": 1},
+      {"arxiv_id": "2408.14805v1", "page": 1}
+    ],
+    "must_include": ["Ocean-OCR", "Platypus"]
+  },
+  {
+    "id": "absent-bentham",
+    "type": "unanswerable",
+    "answerable": false,
+    "question": "What character error rate do recognisers reach on the Bentham handwriting dataset?",
+    "relevant": [],
+    "must_include": []
+  },
+  {
+    "id": "absent-kraken",
+    "type": "unanswerable",
+    "answerable": false,
+    "question": "How does the Kraken OCR engine segment text lines in historical documents?",
+    "relevant": [],
+    "must_include": []
+  },
+  {
+    "id": "absent-fpga",
+    "type": "unanswerable",
+    "answerable": false,
+    "question": "How fast does scene text recognition run when deployed on an FPGA?",
+    "relevant": [],
+    "must_include": []
+  }
+]

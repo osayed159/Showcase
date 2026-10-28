@@ -1,0 +1,573 @@
+{
+  "summary": {
+    "pipeline": {
+      "correct": 10,
+      "grounded": 9,
+      "false_refusals": 1,
+      "answerable": 13,
+      "correct_refusals": 3,
+      "unanswerable": 3,
+      "unsupported_numbers": 0,
+      "invalid_citations": 4,
+      "avg_seconds": 19.915382575003605
+    },
+    "agent_before_fix": {
+      "correct": 3,
+      "grounded": 2,
+      "false_refusals": 10,
+      "answerable": 13,
+      "correct_refusals": 3,
+      "unanswerable": 3,
+      "unsupported_numbers": 0,
+      "invalid_citations": 0,
+      "avg_seconds": 12.647868612499224
+    },
+    "agent": {
+      "correct": 12,
+      "grounded": 10,
+      "false_refusals": 0,
+      "answerable": 13,
+      "correct_refusals": 3,
+      "unanswerable": 3,
+      "unsupported_numbers": 0,
+      "invalid_citations": 2,
+      "avg_seconds": 26.61483057499572
+    }
+  },
+  "rows": {
+    "pipeline": [
+      {
+        "id": "cer-definition",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 110.45567379999557,
+        "answer": "The character error rate (CER) is computed as: CER = S + I + DN, where S is the number of substitutions, I is the number of insertions, D is the number of deletions, and N is the total number of characters in the ground truth [1]. This formula is derived from the edit distance between the predicted text and the ground truth [2]. Additionally, CER can be calculated using the Levenshtein distance normalized by the total length of the ground truth, as shown in equation (1): CER = \u03a3 (len(y_i) * levd(\u0177_i, y_i)) / \u03a3 (len(y_i)) [5]."
+      },
+      {
+        "id": "gpt4v-weakness",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 19.471770200005267,
+        "answer": "GPT-4V falls short when reading text in images in several ways: it is limited when dealing with camera-captured and poor handwriting scenarios, as shown in Table 6 and Figure 3 [1]. It exhibits challenges in fine-grained character recognition, such as missing small-scale characters like superscripts and subscripts [1]. It has zero accuracy in recognizing Chinese text (ReCTS), likely due to a lack of Chinese scene text training data [4]. Additionally, it struggles with non-Latin languages and complex tasks like handwriting mathematical expression recognition, table structure recognition, and end-to-end semantic entity recognition [5]."
+      },
+      {
+        "id": "ocr-scaling",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 17.452910599997267,
+        "answer": "Yes, OCR accuracy improves as the model size increases. The paper states that \"large-scale models make better use of samples than small-scale models which means that large models achieve lower error rate with fixed amount of data\" [4]. Additionally, it reports that CLIP4STR-L achieved a top-1 average accuracy of 97.42% on 6 common test benchmarks, which is a new state-of-the-art result [2]. This indicates that larger models lead to higher accuracy. The study also establishes that there exist smooth power laws between model size and performance, demonstrating a predictable improvement in performance with increased model size [2][4]."
+      },
+      {
+        "id": "abinet-noise",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 18.09620190001442,
+        "answer": "ABINet++ stops its language model from being misled by noisy predictions through an iterative correction execution manner that progressively corrects predictions, thereby alleviating the impact of noise input [1]. This iterative correction is further supported by an ensemble of iterative predictions, which helps in refining the model's output and reducing the influence of initial noisy inputs [1]. Additionally, the bidirectional cloze network (BCN) enhances feature representation by jointly conditioning on character context at both sides, improving robustness against noise [2]. The method also addresses noise propagation by decoupling the recognizer into vision and language models, blocking gradient flow to prevent error propagation from the vision model to the language model [1]."
+      },
+      {
+        "id": "handwritten-dates",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 11.504959099984262,
+        "answer": "Yes, the DARE system has been built to transcribe dates written by hand on old documents [1][3]. It is designed to handle handwritten dates from historical documents with varying degradation and handwriting styles [1][2]. The system uses a large-scale database of over 2.2 million handwritten dates, segmented from different historical documents [3]. This enables robust transcription even from difficult-to-read historical documents [1]."
+      },
+      {
+        "id": "low-light",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 18.46804740000516,
+        "answer": "It is hard to recognise text in dark, poorly lit photos because images captured in such conditions suffer from low contrast, noise, and color distortions, which severely degrade the performance of standard optical character recognition (OCR) models [1]. Generic low-light image enhancement methods, designed for human visual perception, often introduce artifacts or over-smoothing that hinder subsequent text recognition [2]. Existing scene text recognizers trained on well-lit data struggle in low-light scenarios due to the domain gap, causing missed or mispredicted characters [4]. Additionally, naive brighten-and-recognize pipelines fail because they do not optimize for text legibility, and generic enhancement methods may distort critical text features [2][4]."
+      },
+      {
+        "id": "urdu-backbone",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 7.586148500005947,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "iam-cer-number",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 10.162050200015074,
+        "answer": "The parameter-efficient fine-tuning approach reaches a Character Error Rate (CER) of 4.02 on the IAM dataset [2]."
+      },
+      {
+        "id": "low-resource",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 2,
+        "seconds": 17.46908710000571,
+        "answer": "Handwriting recognition for languages without much labelled data can be improved using transfer learning, where models are trained on datasets with ground truth and then adapted to new datasets with no ground truth by sharing common properties [12]. Auxiliary tasks can also be used to enhance recognition, as demonstrated in Amharic character recognition using multi-task learning [1][10]. Additionally, leveraging pre-trained architectures and simplifying models like EASTER, which uses only 1-D convolutions, can improve performance with limited training data [3]. Limited datasets are a common challenge, especially for languages like Urdu, where few free datasets are available and training requires large volumes of data [2][5]."
+      },
+      {
+        "id": "synthetic-handwriting",
+        "answerable": true,
+        "refused": false,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 1,
+        "seconds": 11.879962500010151,
+        "answer": "Synthetic handwriting images can be generated by utilizing a variety of handwriting styles from different fonts based on corpus content to mimic authentic handwritten text [5]. Additionally, a \"synthetic IAM\" approach is used, which involves generating text with random content and style, providing a lower bound on unconditional generation [6]. These synthetic images are then used to train handwritten text recognition models [2][4]."
+      },
+      {
+        "id": "bengali-tokenizer",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 20.750223300012294,
+        "answer": "Tokenizing Bengali handwriting into graphemes rather than individual characters is necessary because Bengali script comprises approximately 13,000 graphemes\u2014substantially more than English\u2014which makes grapheme-level tokenization a particularly important design decision [3]. Character-level tokenization fails to capture the intricate ligatures, conjuncts, and allographic variations present in Bengali handwriting, and subword or character-level tokenization becomes unreliable without large, diverse training data [2][4]. A grapheme-based tokenizer enforces a one-to-one mapping between visually coherent units and model output tokens, improving recognition performance by addressing the visual structure of Bengali text [2]. Basher et al. (2023) empirically demonstrated that grapheme-level tokenization yields improved performance compared to conventional character-level tokenization for Bengali HTR [3]."
+      },
+      {
+        "id": "simple-str",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 17.881855200015707,
+        "answer": "Yes, a deliberately simple architecture can compete with complex scene text recognisers. The KISS model, which uses only off-the-shelf neural network building blocks, achieves competitive/state-of-the-art recognition accuracy on benchmark datasets for scene text recognition [1][3]. TextAdaIN, a simple method that introduces local distortions to prevent overfitting, achieves state-of-the-art results on handwritten text recognition benchmarks and generalizes to scene text recognition [2]. The decoupled attention network, despite its simplicity, achieves state-of-the-art or comparable performance in both 1D and 2D text recognition [4]. These results indicate that simplicity does not compromise performance in scene text recognition."
+      },
+      {
+        "id": "general-ocr-model",
+        "answerable": true,
+        "refused": false,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 1,
+        "seconds": 13.138317299977643,
+        "answer": "Yes, GOT [58] is a MLLM designed specifically for OCR tasks [2]. However, it cannot follow complex instructions and is therefore not compatible with general-purpose tasks [2]. This indicates that while there is a model built specifically for OCR, it lacks compatibility with general-purpose tasks, implying it is not a general-purpose vision-language model [2]. [2]"
+      },
+      {
+        "id": "absent-bentham",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 8.841171300009592,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "absent-kraken",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 7.305820100009441,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "absent-fpga",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 8.181922699994175,
+        "answer": "I don't know based on these papers."
+      }
+    ],
+    "agent_before_fix": [
+      {
+        "id": "cer-definition",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 102.18705720000435,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "gpt4v-weakness",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 3.0366473000030965,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "ocr-scaling",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 25.080971099989256,
+        "answer": "Yes, OCR accuracy improves as the model size increases. The paper \"An Empirical Study of Scaling Law for OCR\" states that model performance predictably improves with sufficient increases in model size, data volume, and computational resources [1]. Specifically, CLIP4STR-L achieved a top-1 average accuracy of 97.42% on 6 common test benchmarks, demonstrating a significant improvement over smaller models [1]. This indicates a clear trend of improved accuracy with larger model sizes [1]. The study also confirms the presence of smooth power laws in OCR, showing that performance scales predictably with model size [1]. However, the paper notes that challenges remain in model scaling, suggesting that while accuracy improves, other factors may limit further gains [1]."
+      },
+      {
+        "id": "abinet-noise",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.5005829999863636,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "handwritten-dates",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 18.62181770001189,
+        "answer": "Yes, DARE is a large-scale handwritten date recognition system that has been built to transcribe dates written by hand on old documents [2209.06717v1]. This system specifically focuses on recognizing handwritten dates, making it relevant to the transcription of old documents [2209.06717v1]. No other paper in the list explicitly mentions a system for transcribing dates written by hand on old documents. [2209.06717v1]"
+      },
+      {
+        "id": "low-light",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.4954628999985289,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "urdu-backbone",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.2362130000256002,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "iam-cer-number",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.3602234999998473,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "low-resource",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.3318431999941822,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "synthetic-handwriting",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.186920599982841,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "bengali-tokenizer",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.3398166999977548,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "simple-str",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 25.36101379999309,
+        "answer": "Yes, a deliberately simple architecture can compete with complex scene text recognisers. The KISS model, for instance, uses off-the-shelf neural network components like ResNets, a spatial transformer, and a transformer, yet achieves competitive/state-of-the-art recognition accuracy on benchmark datasets for scene text recognition [2]. This demonstrates that a simple architecture can achieve strong performance without requiring extensive complexity [2]. Additionally, the GIT model, which consists of only one image encoder and one text decoder, surpasses human performance on TextCaps and achieves state-of-the-art results in image/video captioning and QA without relying on object detectors or OCR [1]. These examples show that simplicity in architecture can lead to strong performance, especially with scaling [1]. Therefore, simple architectures can indeed compete with more complex ones in scene text recognition [2]."
+      },
+      {
+        "id": "general-ocr-model",
+        "answerable": true,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.416934200009564,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "absent-bentham",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 14.40030609999667,
+        "answer": "The character error rate (CER) on the Bentham handwriting dataset is not mentioned in the provided passages. [3] discusses CER on the IAM dataset, not Bentham. I don't know based on these papers."
+      },
+      {
+        "id": "absent-kraken",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.5083103999786545,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "absent-fpga",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 1.3017771000158973,
+        "answer": "I don't know based on these papers."
+      }
+    ],
+    "agent": [
+      {
+        "id": "cer-definition",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 27.64786730002379,
+        "answer": "The Character Error Rate (CER) is computed using the Levenshtein edit distance between the predicted text and the ground truth text. It is defined as: CER = S + I + DN, where S is the number of substitutions, I is the number of insertions, D is the number of deletions, and N is the total number of characters in the ground truth [1]. Alternatively, CER can be calculated as CER = \u03a3 (len(y_i) \u00d7 levd(\u0177_i, y_i)) / \u03a3 (len(y_i)), where levd measures the Levenshtein distance between the predicted and ground truth sequences [5]. These metrics evaluate character-level errors and are case-sensitive [1]."
+      },
+      {
+        "id": "gpt4v-weakness",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 21.276756100007333,
+        "answer": "GPT-4V falls short when dealing with camera-captured and poor handwriting scenarios, as its performance on HEM100K (which features such images) significantly drops compared to CROHME2014 [1]. It also exhibits challenges in fine-grained character recognition, such as missing small-scale characters like superscripts and subscripts [1]. Additionally, GPT-4V struggles with non-Latin languages and complex tasks like handwriting mathematical expression recognition, table structure recognition, and end-to-end semantic entity recognition [5]. The accuracy of Chinese text recognition is zero (ReCTS), suggesting a lack of training data for Chinese scene text [4]. These limitations highlight its shortcomings in multilingual and fine-detail OCR tasks [1]."
+      },
+      {
+        "id": "ocr-scaling",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 23.912516299984418,
+        "answer": "Yes, OCR accuracy improves as the model size increases, as demonstrated by the observation that large-scale models make better use of samples and achieve lower error rates with a fixed amount of data [4]. This improvement is supported by experiments showing that larger models, such as CLIP4STR-L, achieve a top-1 average accuracy of 97.42% on 6 common test benchmarks [2]. The study establishes that there exist smooth power laws between model size and performance, indicating a predictable improvement in accuracy with sufficient increases in model size [2]. However, the paper also notes that challenges remain in model scaling, and that data scaling can be equally advantageous [1]. The findings confirm that model scaling contributes to enhanced OCR performance [4]. [2]"
+      },
+      {
+        "id": "abinet-noise",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 1,
+        "seconds": 22.101786599989282,
+        "answer": "ABINet++ stops its language model from being misled by noisy predictions through an iterative correction execution manner that progressively corrects predictions, thereby alleviating the impact of noise input [2]. This iterative process helps reduce the influence of errors from the vision model on the language model's output [5]. The method ensures that noisy inputs do not accumulate and propagate through the system, improving overall prediction accuracy [2]. The bidirectional cloze network (BCN) further enhances robustness by learning text representations using character context from both sides [2]. These components work together to mitigate noise effects during language modeling [8]. The iterative correction is a key mechanism that directly addresses the issue of noisy predictions [2]."
+      },
+      {
+        "id": "handwritten-dates",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 22.231658600008814,
+        "answer": "Yes, a system has been built to transcribe dates written by hand on old documents. The DARE system is a large-scale handwritten date recognition system designed specifically for this purpose, using a database of segmented dates from various historical documents [1]. The DARE database contains almost 10 million tokens from more than 2.2 million handwritten dates, sourced from different historical documents [3]. The system employs an architecture based on EfficientNetV2, which is fast to train and robust to parameter choices [3]. It also demonstrates that transfer learning from the DARE system significantly increases transcription accuracy, even with small training samples [5]. This system addresses challenges such as document degradation and variation in handwriting styles [2]."
+      },
+      {
+        "id": "low-light",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 22.465262399986386,
+        "answer": "It is hard to recognise text in dark, poorly lit photos because images suffer from low contrast, noise, and color distortions, which severely degrade the performance of standard OCR models [1]. Generic low-light image enhancement methods, such as histogram equalization or Retinex-based enhancers, are not optimized for text and can introduce artifacts or over-smoothing that hinder text recognition [2]. Existing scene text recognizers trained on well-lit data struggle in low-light scenarios due to a domain gap, causing missed or mispredicted characters [4]. These issues highlight the need for specialized approaches that focus on text legibility rather than general image brightness [2]."
+      },
+      {
+        "id": "urdu-backbone",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 9.656244399986463,
+        "answer": "The ResNet18 model was used to recognize handwritten Urdu [4]."
+      },
+      {
+        "id": "iam-cer-number",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 22.256569799996214,
+        "answer": "The parameter-efficient fine-tuning approach achieves a Character Error Rate (CER) of 4.02 on the IAM dataset [2]. This result is specific to the DLoRA-TrOCR method, which uses a LoRA module in the text decoder and a DoRA module in the image encoder [2]. The CER of 4.02 is reported on the IAM dataset, which is part of the evaluation of mixed text recognition performance [2]. No other error rate for parameter-efficient fine-tuning is mentioned in the provided passages [2]."
+      },
+      {
+        "id": "low-resource",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 25.308659699978307,
+        "answer": "Handwriting recognition for languages with little labelled data can be improved using transfer learning, where models are trained on large datasets of other languages or scripts and then adapted to the target language [1]. Auxiliary tasks, such as multi-task learning, can also enhance recognition by leveraging additional information from the alphabet to improve character recognition [1]. These methods are particularly useful when dedicated datasets are scarce or unavailable [1]. While most existing studies adapt general techniques designed for Latin scripts, specific innovations for scripts like Amharic are often overlooked [4]. Limited datasets for languages like Urdu make training reliable models difficult, highlighting the need for innovative approaches [2]. However, no specific solution is detailed in the provided papers for how these methods directly address the lack of labelled data. [1]"
+      },
+      {
+        "id": "synthetic-handwriting",
+        "answerable": true,
+        "refused": false,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 1,
+        "seconds": 23.76057139999466,
+        "answer": "Synthetic handwriting images can be generated by using a variety of handwriting styles from different fonts based on corpus content to mimic authentic handwritten text [5]. A synthetic IAM approach is used as a baseline for unconditional generation with random content and text, providing a lower bound on generation performance [6]. These synthetic images are then used to train handwritten text recognition models, such as those trained on the IAM dataset [2]. The generated data helps bridge the domain gap between synthetic and real-world handwriting variations [1]. Additionally, methods like SmartPatch improve handwritten word imitation using patch discriminators [2]. Ocean-OCR uses a vision-language model to generate realistic text visual-question-answers within images to create synthetic handwritten OCR data [5]."
+      },
+      {
+        "id": "bengali-tokenizer",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 30.296725099993637,
+        "answer": "Tokenizing Bengali handwriting into graphemes rather than individual characters is necessary because graphemes are the smallest visually distinguishable units in the Bengali script, which includes intricate ligatures, conjuncts, and allographic variations. Character-level tokenization fails to capture these visual structures effectively and becomes unreliable due to handwriting variations and the visual instability of subword units in handwritten text [4]. In contrast, grapheme-based tokenization enforces a one-to-one mapping between visually coherent units and model output tokens, improving recognition performance [2]. The Bengali script comprises approximately 13,000 graphemes, significantly more than English, making grapheme-level tokenization a critical design decision [3]. Empirical results show that grapheme-level tokenization yields improved performance compared to conventional character-level tokenization for Bengali HTR [3]."
+      },
+      {
+        "id": "simple-str",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 30.03451369999675,
+        "answer": "Yes, a deliberately simple architecture can compete with complex scene text recognisers. KISS, a model built only with off-the-shelf neural network components, achieves competitive/state-of-the-art recognition accuracy on benchmark datasets [4]. The decoupled attention network (DAN) is significantly simple yet achieves state-of-the-art or comparable performance in both 1D and 2D text recognition [4]. TextAdaIN, despite its simplicity, achieves state-of-the-art results on handwritten text recognition benchmarks and generalizes to scene text recognition [2]. These examples show that simple architectures can match or exceed the performance of more complex models [2][4]."
+      },
+      {
+        "id": "general-ocr-model",
+        "answerable": true,
+        "refused": false,
+        "correct": true,
+        "grounded": true,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 65.34454239998013,
+        "answer": "Yes, Ocean-OCR is a general-purpose vision-language model built specifically for OCR. It is a 3B MLLM that excels in OCR tasks while achieving comparable performance on general-purpose tasks [3]. Ocean-OCR demonstrates state-of-the-art performance on multiple OCR-related benchmarks, such as DocVQA, ChartQA, TextVQA, and OCRBench [5]. The model outperforms both previous MLLMs and traditional OCR models in various real-world OCR application scenarios [5]. It is designed to handle diverse OCR tasks, including scene-level, document-level, and handwritten-level text recognition [1]."
+      },
+      {
+        "id": "absent-bentham",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 37.30587030001334,
+        "answer": "The character error rate (CER) for recognisers on the Bentham handwriting dataset is not mentioned in any of the provided passages. [5] and [6] discuss CER for datasets like IAM and do not reference the Bentham dataset. I don't know based on these papers."
+      },
+      {
+        "id": "absent-kraken",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 22.83943829999771,
+        "answer": "I don't know based on these papers."
+      },
+      {
+        "id": "absent-fpga",
+        "answerable": false,
+        "refused": true,
+        "correct": false,
+        "grounded": false,
+        "unsupported_numbers": 0,
+        "invalid_citations": 0,
+        "seconds": 19.398306799994316,
+        "answer": "I don't know based on these papers."
+      }
+    ]
+  }
+}
